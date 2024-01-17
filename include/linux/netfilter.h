@@ -182,6 +182,7 @@ struct nf_sockopt_ops {
 	struct module *owner;
 
 	DEEPIN_KABI_RESERVE(1)
+	DEEPIN_KABI_RESERVE(2)
 };
 
 /* Function to register/unregister hook points. */
@@ -382,6 +383,7 @@ struct nf_nat_hook {
 	void (*remove_nat_bysrc)(struct nf_conn *ct);
 
 	DEEPIN_KABI_RESERVE(1)
+	DEEPIN_KABI_RESERVE(2)
 };
 
 extern const struct nf_nat_hook __rcu *nf_nat_hook;
@@ -472,7 +474,7 @@ struct nf_ct_hook {
 	int (*confirm)(struct sk_buff *skb);
 
 	DEEPIN_KABI_RESERVE(1)
-
+	DEEPIN_KABI_RESERVE(2)
 };
 extern const struct nf_ct_hook __rcu *nf_ct_hook;
 
@@ -490,6 +492,7 @@ struct nfnl_ct_hook {
 			   enum ip_conntrack_info ctinfo, s32 off);
 
 	DEEPIN_KABI_RESERVE(1)
+	DEEPIN_KABI_RESERVE(2)
 };
 extern const struct nfnl_ct_hook __rcu *nfnl_ct_hook;
 

@@ -68,6 +68,7 @@ struct nf_ipv6_ops {
 #endif
 
 	DEEPIN_KABI_RESERVE(1)
+	DEEPIN_KABI_RESERVE(2)
 };
 
 #ifdef CONFIG_NETFILTER
