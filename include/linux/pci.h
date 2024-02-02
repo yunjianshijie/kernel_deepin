@@ -26,6 +26,7 @@
 #include <linux/args.h>
 #include <linux/mod_devicetable.h>
 
+#include <linux/deepin_kabi.h>
 #include <linux/types.h>
 #include <linux/init.h>
 #include <linux/ioport.h>
@@ -539,6 +540,13 @@ struct pci_dev {
 	DEEPIN_KABI_RESERVE(6)
 	DEEPIN_KABI_RESERVE(7)
 	DEEPIN_KABI_RESERVE(8)
+	DEEPIN_KABI_RESERVE(9)
+	DEEPIN_KABI_RESERVE(10)
+	DEEPIN_KABI_RESERVE(11)
+	DEEPIN_KABI_RESERVE(12)
+	DEEPIN_KABI_RESERVE(13)
+	DEEPIN_KABI_RESERVE(14)
+	DEEPIN_KABI_RESERVE(15)
 };
 
 static inline struct pci_dev *pci_physfn(struct pci_dev *dev)
