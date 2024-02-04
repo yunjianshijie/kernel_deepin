@@ -39,8 +39,10 @@
 #include <linux/dma-resv.h>
 #include <linux/list.h>
 #include <linux/mutex.h>
+#include <linux/deepin_kabi.h>
 
 #include <drm/drm_vma_manager.h>
+
 
 struct iosys_map;
 struct drm_gem_object;
@@ -217,6 +219,9 @@ struct drm_gem_object_funcs {
 	 * This is optional but necessary for mmap support.
 	 */
 	const struct vm_operations_struct *vm_ops;
+
+	DEEPIN_KABI_RESERVE(1)
+	DEEPIN_KABI_RESERVE(2)
 };
 
 /**
@@ -422,6 +427,9 @@ struct drm_gem_object {
 	 * The current LRU list that the GEM object is on.
 	 */
 	struct drm_gem_lru *lru;
+
+	DEEPIN_KABI_RESERVE(1)
+	DEEPIN_KABI_RESERVE(2)
 };
 
 /**
